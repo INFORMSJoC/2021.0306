@@ -26,7 +26,7 @@ Below is the BibTex for citing this snapshot of the respoitory.
   title =         {A Decision Rule Approach for Two-Stage Data-Driven Distributionally Robust Optimization Problems with Random Recourse},
   year =          {2023},
   doi =           {10.1287/ijoc.2021.0036.cd},
-  url =           {https://github.com/INFORMSJoC/2021-0036},
+  url =           {https://github.com/INFORMSJoC/2021.0036},
 }  
 ```
 
