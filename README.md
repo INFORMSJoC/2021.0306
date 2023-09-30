@@ -20,7 +20,7 @@ https://doi.org/10.1287/ijoc.2021.0036.cd
 Below is the BibTex for citing this snapshot of the respoitory.
 
 ```
-@article{CacheTest,
+@article{FanHanasusanto2023,
   author =        {Xiangyi Fan and Grani A. Hanasusanto},
   publisher =     {INFORMS Journal on Computing},
   title =         {A Decision Rule Approach for Two-Stage Data-Driven Distributionally Robust Optimization Problems with Random Recourse},
@@ -39,13 +39,13 @@ The goal of this repository is to demonstrate a decision rule approach for two-s
 ### Scripts
 - The folder [Inventory_Allocation](scripts/Inventory_Allocation) contains Matlab implementation (except for Benders decomposition) of the experiment "Network Inventory Allocation" discussed in the paper. 
 
-- The folder [Newsvendor](scripts/Newsvendor) contains Matlab implementation (except for Benders decomposition) of the experiment "Muti-item Newsvendor" discussed in the paper. 
+- The folder [Newsvendor](scripts/Newsvendor) contains Matlab implementation (except for Benders decomposition) of the experiment "Multi-item Newsvendor" discussed in the paper. 
 
 - The folder [Medical_scheduling](scripts/Medical_Scheduling) contains Matlab implementation (except for Benders decomposition) of the experiment "Medical Scheduling" discussed in the paper. 
 
 - The folder [Benders_Inventory_Allocation](scripts/Benders_Inventory_Allocation) contains Matlab implementation of Benders decomposition in the experiment "Network Inventory Allocation".
 
-- The folder [Benders_Newsvendor](scripts/Benders_Newsvendor) contains Matlab implementation of Benders decomposition in the experiment "Muti-item Newsvendor".
+- The folder [Benders_Newsvendor](scripts/Benders_Newsvendor) contains Matlab implementation of Benders decomposition in the experiment "Multi-item Newsvendor".
 
 - The folder [Benders_Medical_Scheduling](scripts/Benders_Medical_Scheduling) contains Matlab implementation of Benders decomposition in the experiment "Medical Scheduling".
 
@@ -67,7 +67,7 @@ The [results](results) folder contains the model outputs.
 
 - To replicate the results in [Figure 1](results/Newsvendor_Npoints_Plot.jpg) and Table 3, run the file [Npoints_plot.m](scripts/Newsvendor/Npoints_plot.m) 
 
-- To replicate the results in [Figure 2 (Left)](results/Newsvendor_K_plot.jpg), [Figure 2 (middle)](results/Newsvendor_epsilon_plot.jpg), and [Figure 2 (right)](results/Newsvendor_gamma_plot.jpg), run the files [K_plot_fix.m](scripts/Newsvendor/K_plot_fix.m), [epsilon_plot.m](scripts/Newsvendor/epsilon_plot.m), and [epsilon_p_plot.m](scripts/Newsvendor/epsilon_p_plot.m), separately. 
+- To replicate the results in [Figure 2 (Left)](results/Newsvendor_K_plot.jpg), [Figure 2 (middle)](results/Newsvendor_epsilon_plot.jpg), and [Figure 2 (right)](results/Newsvendor_gamma_plot.jpg), run the files [K_plot_fix.m](scripts/Newsvendor/K_plot_fix.m), [epsilon_plot.m](scripts/Newsvendor/epsilon_plot.m), and [epsilon_p_plot.m](scripts/Newsvendor/epsilon_p_plot.m), respectively. 
 
 - To replicate the results in Table 4 in the paper, run the file [Npoints_plot.m](scripts/Benders_Newsvendor/Npoints_plot.m).
 
