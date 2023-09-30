@@ -1,106 +1,89 @@
 [![INFORMS Journal on Computing Logo](https://INFORMSJoC.github.io/logos/INFORMS_Journal_on_Computing_Header.jpg)](https://pubsonline.informs.org/journal/ijoc)
 
-# CacheTest
+# A Decision Rule Approach for Two-Stage Data-Driven Distributionally Robust Optimization Problems with Random Recourse
 
 This archive is distributed in association with the [INFORMS Journal on
 Computing](https://pubsonline.informs.org/journal/ijoc) under the [MIT License](LICENSE).
 
-The software and data in this repository are a snapshot of the software and data
-that were used in the research reported on in the paper 
-[This is a Template](https://doi.org/10.1287/ijoc.2019.0000) by T. Ralphs. 
-The snapshot is based on 
-[this SHA](https://github.com/tkralphs/JoCTemplate/commit/f7f30c63adbcb0811e5a133e1def696b74f3ba15) 
-in the development repository. 
+This repository contains supporting material for the paper A Decision Rule Approach for Two-Stage Data-Driven Distributionally Robust Optimization Problems with Random Recourse by Xiangyi Fan and Grani A. Hanasusanto. 
 
-**Important: This code is being developed on an on-going basis at 
-https://github.com/tkralphs/JoCTemplate. Please go there if you would like to
-get a more recent version or would like support**
+The software and data in this repository are a snapshot of the software and data that were used in the research reported on in the paper.
 
 ## Cite
 
 To cite the contents of this repository, please cite both the paper and this repo, using their respective DOIs.
 
-https://doi.org/10.1287/ijoc.2019.0000
+https://doi.org/10.1287/ijoc.2021.0036
 
-https://doi.org/10.1287/ijoc.2019.0000.cd
+https://doi.org/10.1287/ijoc.2021.0036.cd
 
 Below is the BibTex for citing this snapshot of the respoitory.
 
 ```
 @article{CacheTest,
-  author =        {T. Ralphs},
+  author =        {Xiangyi Fan and Grani A. Hanasusanto},
   publisher =     {INFORMS Journal on Computing},
-  title =         {{CacheTest}},
-  year =          {2020},
-  doi =           {10.1287/ijoc.2019.0000.cd},
-  url =           {https://github.com/INFORMSJoC/2019.0000},
+  title =         {A Decision Rule Approach for Two-Stage Data-Driven Distributionally Robust Optimization Problems with Random Recourse},
+  year =          {2023},
+  doi =           {10.1287/ijoc.2021.0036.cd},
+  url =           {https://github.com/INFORMSJoC/2021-0036},
 }  
 ```
 
 ## Description
 
-The goal of this software is to demonstrate the effect of cache optimization.
+The goal of this repository is to demonstrate a decision rule approach for two-stage data-driven distributionally robust optimization probelms with random recourse.  
 
-## Building
+## Repository Structure
 
-In Linux, to build the version that multiplies all elements of a vector by a
-constant (used to obtain the results in [Figure 1](results/mult-test.png) in the
-paper), stepping K elements at a time, execute the following commands.
+### Scripts
+- The folder [Inventory_Allocation](scripts/Inventory_Allocation) contains Matlab implementation (except for Benders decomposition) of the experiment "Network Inventory Allocation" discussed in the paper. 
 
-```
-make mult
-```
+- The folder [Newsvendor](scripts/Newsvendor) contains Matlab implementation (except for Benders decomposition) of the experiment "Muti-item Newsvendor" discussed in the paper. 
 
-Alternatively, to build the version that sums the elements of a vector (used
-to obtain the results [Figure 2](results/sum-test.png) in the paper), stepping K
-elements at a time, do the following.
+- The folder [Medical_scheduling](scripts/Medical_Scheduling) contains Matlab implementation (except for Benders decomposition) of the experiment "Medical Scheduling" discussed in the paper. 
 
-```
-make clean
-make sum
-```
+- The folder [Benders_Inventory_Allocation](scripts/Benders_Inventory_Allocation) contains Matlab implementation of Benders decomposition in the experiment "Network Inventory Allocation".
 
-Be sure to make clean before building a different version of the code.
+- The folder [Benders_Newsvendor](scripts/Benders_Newsvendor) contains Matlab implementation of Benders decomposition in the experiment "Muti-item Newsvendor".
 
-## Results
+- The folder [Benders_Medical_Scheduling](scripts/Benders_Medical_Scheduling) contains Matlab implementation of Benders decomposition in the experiment "Medical Scheduling".
 
-Figure 1 in the paper shows the results of the multiplication test with different
-values of K using `gcc` 7.5 on an Ubuntu Linux box.
+- The folder [Benders_Facility_Location](scripts/Benders_Facility_Location) contains Matlab implementation of Benders decomposition in the experiment "Facility Location Problem".
 
-![Figure 1](results/mult-test.png)
+### Data
 
-Figure 2 in the paper shows the results of the sum test with different
-values of K using `gcc` 7.5 on an Ubuntu Linux box.
+All the necessary [data](data) for replicating the experiments is included within the scripts.
 
-![Figure 1](results/sum-test.png)
+### Results
+
+The [results](results) folder contains the model outputs.
 
 ## Replicating
 
-To replicate the results in [Figure 1](results/mult-test), do either
+### Main Text
 
-```
-make mult-test
-```
-or
-```
-python test.py mult
-```
-To replicate the results in [Figure 2](results/sum-test), do either
+- To replicate the results in Table 1 & 2 in the paper, run the files [LS_Npoints_plot_general.m](scripts/Inventory_Allocation/LS_Npoints_plot_general.m), [LS_Npoints_plot_general_cons_uniform.m](scripts/Inventory_Allocation/LS_Npoints_plot_general_cons_uniform.m), and [Npoints_plot.m](scripts/Benders_Inventory_Allocation/Npoints_plot.m).
 
-```
-make sum-test
-```
-or
-```
-python test.py sum
-```
+- To replicate the results in [Figure 1](results/Newsvendor_Npoints_Plot.jpg) and Table 3, run the file [Npoints_plot.m](scripts/Newsvendor/Npoints_plot.m) 
 
-## Ongoing Development
+- To replicate the results in [Figure 2 (Left)](results/Newsvendor_K_plot.jpg), [Figure 2 (middle)](results/Newsvendor_epsilon_plot.jpg), and [Figure 2 (right)](results/Newsvendor_gamma_plot.jpg), run the files [K_plot_fix.m](scripts/Newsvendor/K_plot_fix.m), [epsilon_plot.m](scripts/Newsvendor/epsilon_plot.m), and [epsilon_p_plot.m](scripts/Newsvendor/epsilon_p_plot.m), separately. 
 
-This code is being developed on an on-going basis at the author's
-[Github site](https://github.com/tkralphs/JoCTemplate).
+- To replicate the results in Table 4 in the paper, run the file [Npoints_plot.m](scripts/Benders_Newsvendor/Npoints_plot.m).
+
+### Online Appendix
+
+- To replicate the results in [Figure C.1](results/Medical_Scheduling/MS_Npoints_Plot.jpg) and Table C.1, run the file [MS_Npoints_plot.m](scripts/Medical_Scheduling/MS_Npoints_plot.m).
+
+- To replicate the results in Table C.2 in the paper, run the file [Npoints_plot.m](scripts/Benders_Medical_Scheduling/Npoints_plot.m).  
+
+- To replicate the results in [Figure C.2](results/FLP_Npoints_Plot.jpg), Table C.3, and Table C.4 in the paper, run the file [Npoints_plot.m](scripts/Benders_Facility_Location/Npoints_plot.m). 
+
+
+## Requirements
+
+All optimization problems are solved using MOSEK 9.2.28 via the YALMIP interface, i.e., a toolbox in MATLAB. 
 
 ## Support
 
-For support in using this software, submit an
-[issue](https://github.com/tkralphs/JoCTemplate/issues/new).
+For support in using the codes, please contact the corresponding author.  
