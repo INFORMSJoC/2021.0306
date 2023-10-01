@@ -13,9 +13,9 @@ The software and data in this repository are a snapshot of the software and data
 
 To cite the contents of this repository, please cite both the paper and this repo, using their respective DOIs.
 
-https://doi.org/10.1287/ijoc.2021.0036
+https://doi.org/10.1287/ijoc.2021.0306
 
-https://doi.org/10.1287/ijoc.2021.0036.cd
+https://doi.org/10.1287/ijoc.2021.0306.cd
 
 Below is the BibTex for citing this snapshot of the respoitory.
 
@@ -25,8 +25,8 @@ Below is the BibTex for citing this snapshot of the respoitory.
   publisher =     {INFORMS Journal on Computing},
   title =         {A Decision Rule Approach for Two-Stage Data-Driven Distributionally Robust Optimization Problems with Random Recourse},
   year =          {2023},
-  doi =           {10.1287/ijoc.2021.0036.cd},
-  url =           {https://github.com/INFORMSJoC/2021.0036},
+  doi =           {10.1287/ijoc.2021.0306.cd},
+  url =           {https://github.com/INFORMSJoC/2021.0306},
 }  
 ```
 
